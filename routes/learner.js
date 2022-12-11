@@ -15,8 +15,8 @@ let storage = multer.diskStorage({
 });
 let uploads = multer({ storage: storage });
 const learnerInfo = require('../models/learner');
-// csv upload specific code ends
 
+// csv upload specific code ends
 const learnerCntrlr = require('../controllers/learner')
 
 //read learner list 

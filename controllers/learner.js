@@ -190,7 +190,7 @@ exports.countCSA=async(req,res)=>{
 
 }
 
-//count the number of placement status
+//count the number of placed
 
 exports.countPlaced=async(req,res)=>{
     try {
@@ -204,6 +204,9 @@ exports.countPlaced=async(req,res)=>{
     }
 
 }
+
+//count the number of Job seeking
+
 exports.countJobseeking=async(req,res)=>{
     try {
         const count = await learnerInfo.find({"placementstatus":"Job Seeking"}).count();
@@ -216,6 +219,9 @@ exports.countJobseeking=async(req,res)=>{
     }
 
 }
+
+//count the number of NOT interested
+
 exports.countNotinterested=async(req,res)=>{
     try {
         const count = await learnerInfo.find({"placementstatus":"NOT Interested"}).count();

@@ -50,32 +50,5 @@ router.get('/api/staffpocount', staffCntrlr.countPO)
 // Login Api
 router.post('/api/login',staffCntrlr.login);
 
-// count
-// router.get('/stafflist', staffCntrlr.countTh)
-
-// router.route('/staff/count').get((req, res, next) => {
-//     Staff.aggregate([
-//         {
-//             $group: {
-//                 _id: 1,
-//                 count: {
-//                     $sum: 1
-//                 }
-//             }
-//         },
-//     ],
-//         (error, data) => {
-//             if (error) {
-//                 return next(error);
-//             } else {
-//                 res.json(data);
-//             }
-//         }
-//     );
-// });
-
-
-
-
 
 module.exports = router;
