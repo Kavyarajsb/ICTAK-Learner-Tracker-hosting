@@ -10,9 +10,6 @@ app.use(express.json()); //receive data from frontend to backend
 app.use(express.urlencoded({extended:true})); // useful when we use files,imgs etc
 app.use(logger('dev'));
 
-//static folder  
-// app.use(express.static(path.resolve(__dirname, './uploads')))
-// app.use(express.static(path.resolve(__dirname, './uploads')));
 
 const PORT = process.env.PORT || 3000;
 
@@ -26,7 +23,6 @@ app.use('/api',learnerApi);
 app.get('/*',function(req,res){
     res.sendFile(path.join(__dirname +'/dist/ictak-learner-tracker-project/index.html'));
 });
-
 
 //server code
 app.listen(PORT,()=>{
