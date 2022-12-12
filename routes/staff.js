@@ -50,5 +50,4 @@ router.get('/api/staffpocount', staffCntrlr.countPO)
 // Login Api
 router.post('/api/login',staffCntrlr.login);
 
-
 module.exports = router;
