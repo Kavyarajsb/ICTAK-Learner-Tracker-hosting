@@ -18,6 +18,7 @@ const PORT = process.env.PORT || 3000;
 
 const path = require ('path');
 app.use(express.static('./dist/ictak-learner-tracker-project'));
+app.use(express.static(path.resolve(__dirname, './uploads')))
 
 // routes
 const staffApi = require('./routes/staff');
