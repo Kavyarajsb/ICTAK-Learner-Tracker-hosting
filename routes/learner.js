@@ -65,7 +65,7 @@ router.get('/api/jobseekingcount', learnerCntrlr.countJobseeking)
 router.get('/api/notinterestedcount', learnerCntrlr.countNotinterested)
 
 // upload csv learners
-router.post('/api/uploadlearners',uploads.single('csv'), (req,res)=>{
+router.post('/uploadlearners',uploads.single('csv'), (req,res)=>{
     csv()
     .fromFile(req.file.path)
     .then((jsonObj)=>{
